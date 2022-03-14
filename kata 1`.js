@@ -6,12 +6,9 @@ const sumLargestNumbers = function(data) {
       bgst = data[lg];
     } 
   }; 
-  console.log(data.indexOf(bgst));
-  data.pop(data[2]);
-  console.log(data);
   for(let sm = 0; sm < data.length; sm++){
-    if (smlst < data[sm]) {
-    smlst = data[sm];
+    if (smlst < data[sm] && data[sm] < bgst) {
+      smlst = data[sm];
     }
   } 
   return bgst+smlst;
